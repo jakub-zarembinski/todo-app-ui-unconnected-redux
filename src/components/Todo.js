@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { toggleTodo } from "../redux/actions";
 
 class Todo extends Component {
-
   render() {
     const { todo } = this.props;
     const { toggleTodo } = this.props;

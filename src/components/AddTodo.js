@@ -13,14 +13,7 @@ class AddTodo extends Component {
   };
 
   handleAddTodo = () => {
-    // const { addTodo } = this.props;
-    // const { input } = this.state;
-    // addTodo(input)
-
-    // dispatches actions to add todo
     this.props.addTodo(this.state.input)
-
-    // sets state back to empty string
     this.setState({ input: '' })
   };
 
