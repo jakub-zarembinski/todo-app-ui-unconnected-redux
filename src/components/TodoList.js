@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Todo from "./Todo";
 import { connect } from "react-redux";
-import { getTodosByVisibilityFilter } from "../redux/selectors";
+import { getTodoMapByVisibilityFilter } from "../redux/selectors";
 
 class TodoList extends Component {
   render() {
@@ -9,7 +9,7 @@ class TodoList extends Component {
     return (
       <ul className="todo-list">
         {todos && todos.length
-          ? todos.map((todo) => {
+          ? todos.map(todo => {
               return <Todo key={`todo-${todo.id}`} todo={todo} />;
             })
           : "No todos, yay!"}
@@ -19,8 +19,8 @@ class TodoList extends Component {
 }
 
 const mapStateToProps = state => {
-  const { visibilityFilter } = state
-  const todos = getTodosByVisibilityFilter(state, visibilityFilter)
+  const { visibilityFilter } = state;
+  const todos = getTodoMapByVisibilityFilter(state, visibilityFilter);
   return { todos }
 }
 
