@@ -32,7 +32,4 @@ class AddTodo extends Component {
   }
 }
 
-export default connect(
-  null,
-  { addTodo }
-)(AddTodo)
+export default connect(null, { addTodo })(AddTodo)

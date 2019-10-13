@@ -26,7 +26,4 @@ class Todo extends Component {
   }
 }
 
-export default connect(
-  null,
-  { toggleTodo }
-)(Todo);
+export default connect(null, { toggleTodo })(Todo);
