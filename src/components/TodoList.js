@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todo from "./Todo";
+import Todo1 from "./Todo1";
 import { connect } from "react-redux";
 import { getTodoMapByVisibilityFilter } from "../redux/selectors";
 
@@ -10,7 +10,7 @@ class TodoList extends Component {
       <ul className="todo-list">
         {todos && todos.length
           ? todos.map(todo => {
-              return <Todo key={`todo-${todo.id}`} todo={todo} />;
+              return <Todo1 key={`todo-${todo.id}`} todo={todo} />;
             })
           : "No todos, yay!"}
       </ul>
